@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Pedido de Produtos</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="M.jpg" type="image/x-icon"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="M.jpg" alt="logoChainITSolutions" class="logo"/>
+            <h1>Pedido de Produtos</h1>
+        </header>
+
+        <form id="pedidoForm" class="form">
+            <!-- Nome, Sobrenome, CPF e Celular-->
+            <div class="formcliente">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Abrevie para não passar de 20 caractéres" required maxlength="20">
+            </div>
+            <div class="formcliente">
+                <label for="sobrenome">Sobrenome:</label>
+                <input type="text" id="sobrenome" name="sobrenome" placeholder="Abrevie para não passar de 20 caractéres " required maxlength="20">
+            </div>
+            <div class="formcliente">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Insira os números de seu CPF " required maxlength="11">
+            </div>
+            <div class="formcliente">
+                <label for="celular">DDD + Telefone Celular:</label>
+                <input type="text" id="celular" name="celular" placeholder="Insira o seu telefone celular " required maxlength="11">
+            </div>
+
+            <!-- Vestuário, jóias e acessórios -->
+            <h2>Categorias</h2>
+            <div class="checkbox">
+                <input type="checkbox" id="vestuario" name="categorias" value="Vestuário">
+                <label for="vestuario"><strong>Vestuário</strong></label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="joias" name="categorias" value="Jóias">
+                <label for="joias">Jóias</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="acessorios" name="categorias" value="Acessórios">
+                <label for="acessorios">Acessórios</label>
+            </div>
+
+            <!-- Produtos -->
+            <h2>Produtos</h2>
+            <div class="checkbox">
+                <input type="checkbox" id="camisetas" name="produtos" value="Camisetas">
+                <label for="camisetas"><strong>Camisetas</strong></label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="bones" name="produtos" value="Bonés">
+                <label for="bones">Bonés</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="bermudas" name="produtos" value="Bermudas">
+                <label for="bermudas">Bermudas</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="shorts" name="produtos" value="Shorts">
+                <label for="shorts">Shorts</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="calcas" name="produtos" value="Calças">
+                <label for="calcas"><strong>Calças</strong></label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="cuecas" name="produtos" value="Cuecas">
+                <label for="cuecas">Cuecas</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="sueteres" name="produtos" value="Suéteres">
+                <label for="sueteres"><strong>Suéteres</strong></label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="chinelos" name="produtos" value="Chinelos">
+                <label for="chinelos">Chinelos</label>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="tenis" name="produtos" value="Tênis">
+                <label for="tenis">Tênis</label>
+            </div>
+
+            <!-- Upload de imagem a fazer-->
+            <div class="inputimagem">
+                <label for="myfile">Envie imagens de referência:</label>
+                <input type="file" id="myfile" name="myfile" accept="image/*">
+            </div>
+
+            <!-- Observações -->
+            <div class="observacoes">
+                <label for="observacoes">Observações</label>
+                <textarea id="observacoes" name="observacoes" rows="10" cols="50" placeholder="Cor, marca, modelo etc."></textarea>
+            </div>
+
+            <!-- Agendamento -->
+            <h2>Agendamento</h2>
+            <label for="agendamento">Agende data e horário</label>
+            <input type="datetime-local" id="agendamento" name="agendamento">
+
+            <!-- Forma de Pagamento -->
+            <h2>Forma de Pagamento</h2>
+
+            <div class="pagamento" id="pagamento">
+                <input type="radio" id="pagamento" name="pagamento" value="dinheiro">
+                <label for="dinheiro">Dinheiro</label><br>
+            </div>
+            <div>
+                <input type="radio" id="pagamento" name="pagamento" value="pix">
+                <label for="pix">Pix</label><br>
+            </div>
+            <div>
+                <input type="radio" id="pagamento" name="pagamento" value="debito">
+                <label for="debito">Débito</label><br>
+            </div><div>
+                <input type="radio" id="pagamento" name="pagamento" value="credito">
+                <label for="credito">Crédito</label><br>
+            </div>
+            <br>
+
+            <!-- Botão -->
+            <button type="button" class="enviar" onclick="processarFormulario()">Enviar</button>
+        </form>
+
+        <footer>
+            <p>© 2025 Chain IT Solutions. Todos os direitos reservados.</p>
+            <p>Desenvolvido por <a href="#" target="_blank">Mp Soluções</a></p>            
+        </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
