@@ -17,7 +17,7 @@ async function processarFormulario() {
     const pagamento = Array.from (document.querySelector('input[name="pagamento"]:checked') ? document.querySelector('input[name="pagamento"]:checked').value : "Não selecionado");
 
     const texto = [
-        "Pedido de Produtos - Altos Outlet",
+        "Pedido de Produtos - IT Chain Solutions",
         "",
         `Nome: ${nome} ${sobrenome}`,
         `CPF: ${cpf}`,
